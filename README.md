@@ -1,5 +1,11 @@
 # High Performance Grid (HPG) dev branch.
 
+<strong>
+    This branch has already been merged to experimental. No longer use this one.
+</strong>
+
+
+
 The Grid is highly experimental and far from properly tested, however if you're feeling brave keep reading.
 
 ## Installation
