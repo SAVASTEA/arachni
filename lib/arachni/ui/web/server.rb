@@ -606,10 +606,10 @@ class Server < Sinatra::Base
         plugins = Arachni::Plugin::Manager.new( framework )
 
         default_plugins = {}
-        plugins.parse( Arachni::Plugin::Manager::DEFAULT ).each {
-            |mod|
-            default_plugins[mod] = {}
-        }
+        #plugins.parse( Arachni::Plugin::Manager::DEFAULT ).each {
+        #    |mod|
+        #    default_plugins[mod] = {}
+        #}
 
         session['opts']['plugins'] ||= YAML::dump( default_plugins )
 
