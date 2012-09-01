@@ -19,6 +19,29 @@ require 'arachni/rpc/em'
 module Arachni
 module RPC
 
+module EM::Protocol
+
+    alias :old_receive_object :receive_object
+    def receive_object( *args )
+        old_receive_object *args
+    rescue => e
+        ap e
+        ap e.backtrace
+        ap args
+        ap '------------------------'
+    end
+
+    alias :old_send_object :send_object
+    def send_object( *args )
+        old_send_object *args
+    rescue => e
+        ap e
+        ap e.backtrace
+        ap args
+        ap '------------------------'
+    end
+end
+
 class Client
 
 #
